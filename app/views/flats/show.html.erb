@@ -1,39 +1,49 @@
 <p id="notice"><%= notice %></p>
 <div class="singlebox">
-  <div class="details">
+  <%= image_tag(@flat.image, class: "theimage") %>
+    <!-- </div> -->
+  <div class="thedetails">
+    <!-- <div class="col col-xs-12 col-sm-6 details"> -->
     <div>
-    <strong>Name:</strong>
-    <%= @flat.name %>
+      <!-- <strong>Name:</strong> -->
+      <div><i class="fas fa-home" style="font-size: 30px; margin-bottom: 14px;"></i></div>
+      <%= @flat.name %>
     </div>
 
     <div>
-      <strong>Address:</strong>
+      <!-- <strong>Address:</strong> -->
+      <div><i class="fas fa-map-marker-alt" style="font-size: 30px; margin-bottom: 14px;"></i></div>
       <%= @flat.address %>
     </div>
 
     <div>
-      <strong>Description:</strong>
+      <!-- <strong>Description:</strong> -->
+      <div><i class="fas fa-pencil-alt" style="font-size: 30px; margin-bottom: 14px;"></i></div>
       <%= @flat.description %>
     </div>
   </div>
-  <div class="figures">
-    <div>
-    <strong>Price per night:</strong>
-    <%= @flat.price_per_night %>
-    </div>
+  <div class="thefigures">
+    <!-- <div class="col col-md-3 col-md-offset-3 figures"> -->
+      <div class="theprices">
+        <div><i class="far fa-money-bill-alt" style="font-size: 40px;"></i></div>
+        <strong>Price per night:</strong>
+        <%= @flat.price_per_night %>
+      </div>
 
-    <div>
-      <strong>Number of guests:</strong>
-      <%= @flat.number_of_guests %>
-    </div>
+      <div class="theguests">
+        <div><i class="fas fa-users" style="font-size: 40px;"></i></div>
+        <strong>Number of guests:</strong>
+        <%= @flat.number_of_guests %>
+      </div>
+    <!-- </div> -->
+    <!-- <div class="col col-md-3 col-md-offset-6 booking"> -->
+      <div class="thebooking">
+        <h3>Book Now</h3>
+        <input type="date" placeholder="start date">
+        <input type="date" placeholder="end date">
+      </div>
+    <!-- </div> -->
   </div>
-  <div class="booking">
-    <h3>Book Now</h3>
-    <input type="date" placeholder="start date">
-    <input type="date" placeholder="end date">
-  </div>
+  <%= link_to 'Edit', edit_flat_path(@flat) %> |
+  <%= link_to 'Back', flats_path %>
 </div>
-
-
-<%= link_to 'Edit', edit_flat_path(@flat) %> |
-<%= link_to 'Back', flats_path %>
