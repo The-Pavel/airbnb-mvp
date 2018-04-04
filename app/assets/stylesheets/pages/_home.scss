@@ -1,0 +1,102 @@
+// Specific CSS for your home-page
+.container {
+  width: 78vw;
+  margin: 50px auto;
+  background-color: #E7E7E7;
+  border-radius: 20px;
+  padding: 15px 30px;
+  text-align: center;
+  // height: 200vh;
+}
+
+body {
+  background-color: #E4F1F7;
+}
+
+// .image {
+//   width: 300px;
+//   height: 200px;
+// }
+
+.card {
+  height: 550px;
+  width: 500px;
+  position: relative;
+  background-color: white;
+  margin-left: 40px;
+  margin-top: 20px;
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500px;
+}
+
+.cta {
+  position: absolute;
+  top: 150px;
+  left: 115px;
+  opacity: 0;
+  color: #3E3142;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.card > a {
+  text-decoration: none;
+}
+
+.details {
+  position: absolute;
+  bottom: 50px;
+  left: 20px;
+  color: black;
+  text-align: left;
+  width: 400px;
+}
+
+.numbers {
+  position: absolute;
+  bottom: 40px;
+  right: 30px;
+}
+
+.controls {
+  position: absolute;
+  bottom: 10px;
+  width: 480px;
+}
+
+.price {
+  background-color: #468CC8;
+  margin-bottom: 3px;
+  border-radius: 3px;
+  width: 42px;
+
+  color: white;
+}
+
+.descr {
+  font-style: italic;
+}
+
+.capacity {
+  background-color: #468CC8;
+  border-radius: 3px;
+  width: 42px;
+
+  color: white;
+}
+
+.controls a {
+  margin: 0 50px;
+  text-decoration: none;
+  font-size: 15px;
+  opacity: 0;
+}
+
+.card:hover > .image { opacity: 0.3; transition: all 0.5s ease; }
+.card:hover > .cta { opacity: 1; transition: all 0.5s ease; }
+.card:hover > .controls a { opacity: 1; transition: all 0.5s ease; }

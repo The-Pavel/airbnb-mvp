@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+<div class="singlebox">
+  <div class="details">
+    <div>
+    <strong>Name:</strong>
+    <%= @flat.name %>
+    </div>
+
+    <div>
+      <strong>Address:</strong>
+      <%= @flat.address %>
+    </div>
+
+    <div>
+      <strong>Description:</strong>
+      <%= @flat.description %>
+    </div>
+  </div>
+  <div class="figures">
+    <div>
+    <strong>Price per night:</strong>
+    <%= @flat.price_per_night %>
+    </div>
+
+    <div>
+      <strong>Number of guests:</strong>
+      <%= @flat.number_of_guests %>
+    </div>
+  </div>
+  <div class="booking">
+    <h3>Book Now</h3>
+    <input type="date" placeholder="start date">
+    <input type="date" placeholder="end date">
+  </div>
+</div>
+
+
+<%= link_to 'Edit', edit_flat_path(@flat) %> |
+<%= link_to 'Back', flats_path %>

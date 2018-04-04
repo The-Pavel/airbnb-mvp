@@ -1,0 +1,48 @@
+<%= form_with(model: @flat, local: true) do |form| %>
+  <% if @flat.errors.any? %>
+    <div id="error_explanation">
+      <h4 style="color: red;"><%= pluralize(@flat.errors.count, "error") %> prohibited this flat from being saved:</h4>
+
+      <ul style="list-style: none;">
+      <% @flat.errors.full_messages.each do |message| %>
+        <li style="margin-left: 0;"><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+
+    <%= form.text_field :name, id: :flat_name, placeholder: "Name your flat!" %>
+  </div>
+
+  <div class="field">
+
+    <%= form.text_field :address, id: :flat_address, placeholder: "What's the address?" %>
+  </div>
+
+  <div class="field">
+
+    <%= form.text_area :description, id: :flat_description, placeholder: "Tell us about your place!" %>
+  </div>
+
+  <div class="field">
+
+    <%= form.number_field :price_per_night, id: :flat_price_per_night, placeholder: "How much is the rent?" %>
+  </div>
+
+  <div class="field">
+
+    <%= form.number_field :number_of_guests, id: :flat_number_of_guests, placeholder: "How many people does it fit?" %>
+  </div>
+
+  <div class="field">
+
+    <%= form.text_field :image, id: :flat_image, placeholder: "Link an image of your flat!" %>
+  </div>
+  <br>
+
+  <div class="actions">
+    <%= form.submit "Create!", :class => 'btn btn-primary' %>
+  </div>
+<% end %>
